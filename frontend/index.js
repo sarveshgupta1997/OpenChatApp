@@ -1,5 +1,4 @@
-// const socket = io("https://openchatbackend.onrender.com" , {transports:["websocket"]});
-const socket = io("https://openchatbackend-app.onrender.com" , {transports:["websocket"]});
+const socket = io("https://openchatbackend.onrender.com" , {transports:["websocket"]});
 
 const form = document.querySelector("form");
 const date_section = document.getElementById("date_section");
