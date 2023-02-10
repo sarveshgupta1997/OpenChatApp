@@ -15,6 +15,7 @@ app.get("/about",(req,res)=>{
         res.send("aboutpage")
 })
 
+
 httpServer.listen(4400,()=>{console.log("Listening on 4400")})
 
 // Combining http server using express with web socket.io server
@@ -39,4 +40,10 @@ io.on("connection", socket  =>{
     })
 })
 
-
+app.get("/users",(req,res)=>{
+    let arr=[];
+    for(let i in users){
+        arr.push(users[i])
+    }
+    res.send(arr.join("\n"))
+})
