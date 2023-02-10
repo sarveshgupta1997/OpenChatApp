@@ -9,11 +9,16 @@ const message_submit_button = document.getElementById("message_submit_button");
 var sent_tone,receive_tone,new_user_tone,new_user_tone2,left_tone;
 
 window.onload = function() {
-     sent_tone = new Audio("./frontend/sent_tone.mp3");
+     sent_tone = new Audio("./frontend/sent_tone.mp3"); 
+    //  sent_tone.autoplay="true";
      receive_tone = new Audio("./frontend/receive_tone.mp3");
+    //  receive_tone.autoplay="true";
      new_user_tone = new Audio("./frontend/new_user_tone.mp3");
+    //  new_user_tone.autoplay="true";
      new_user_tone2 = new Audio("./frontend/new_user_tone2.mp3");
+    //  new_user_tone2.autoplay="true";
      left_tone = new Audio("./frontend/left_tone.mp3");
+    //  left_tone.autoplay="true";
 }
 message_submit_button.disabled = true;
 message_input.addEventListener("input",()=>{
