@@ -6,12 +6,13 @@ const message_input = document.getElementById("message_input");
 const container = document.getElementById("container");
 const message_submit_button = document.getElementById("message_submit_button");
 
-var sent_tone,receive_tone,new_user_tone,left_tone;
+var sent_tone,receive_tone,new_user_tone,new_user_tone2,left_tone;
 
 window.onload = function() {
      sent_tone = new Audio("./frontend/sent_tone.mp3");
      receive_tone = new Audio("./frontend/receive_tone.mp3");
      new_user_tone = new Audio("./frontend/new_user_tone.mp3");
+     new_user_tone2 = new Audio("./frontend/new_user_tone2.mp3");
      left_tone = new Audio("./frontend/left_tone.mp3");
 }
 message_submit_button.disabled = true;
@@ -43,7 +44,7 @@ socket.emit("new-user-joined",name);
 
 socket.on("user-joined", name =>{
     appendData(name , "joined the chat." , "center");
-    new_user_tone.play();
+    new_user_tone2.play();
 })
 
 socket.on("receive_message", data =>{
